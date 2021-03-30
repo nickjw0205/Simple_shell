@@ -1,4 +1,4 @@
-# simple_shell
+# Simple_shell
 
 ## Executing Command in a Child Proces
 The first task is to modify the main() function in Figure 1 so that a child process is forked and
@@ -57,3 +57,23 @@ create the child process (which will execute ls -l). This child will also create
 Implementing pipe functionality will also require using the dup2() function as described in the
 previous section. Finally, although several commands can be chained together using multiple pipes,
 you can assume that comman
+
+## Test Command
+```
+--------------------
+ls -l
+ls -l &
+--------------------
+cat -n file1.txt
+cat -n file1.txt &
+--------------------
+ls > output.txt
+ls > output.txt &
+--------------------
+sort < in.txt
+sort < in.txt &
+--------------------
+sort < output.txt
+sort < output.txt &
+--------------------
+```
